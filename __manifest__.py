@@ -5,6 +5,7 @@
     'description': "Saludos en varios lenguajes en Odoo version 17",
     'category': 'Demo',
     'author': 'Martin',
+    'images': ['static/description/ico.png'],
     'website': 'https://www.google.com',
     'license': 'AGPL-3',
     'depends': ['base', 'web'],
