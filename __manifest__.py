@@ -10,8 +10,10 @@
     'license': 'AGPL-3',
     'depends': ['base', 'web'],
     'data': [
+            'views/res_country.xml',
             'views/saludo_dashboard.xml',
-            'views/saludo_menu.xml'
+            'views/saludo_menu.xml',
+            
     ],
     'installable': True,
     'auto_install': False,
