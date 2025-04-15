@@ -1,10 +1,8 @@
 <templates xml:space="preserve">
     <t t-name="owl.OwlChartRenderer" owl="1">
-        <div class="card text-center">
-            <div class="card-header">
-                <h2 t-esc="state.title"/> 
-            </div>
-            <canvas t-ref="chart"/>
+        <div style="width: 50%; height: auto;">
+            <canvas t-ref="chart" width="100%" height="100%"/>
         </div>
     </t>
 </templates>
+
