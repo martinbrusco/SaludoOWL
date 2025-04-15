@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <record id="action_owl_saludo_dashboard" model="ir.actions.client">
+            <field name="name">Owl Saludos Dashboard</field>
+            <field name="tag">owl.saludo_dashboard</field>
+        </record>
+
+        <menuitem id="menu_owl_saludo_dashboard"
+                  name="Saluditos"
+                  action="action_owl_saludo_dashboard"
+                  sequence="10"/>
+    </data>
+</odoo>

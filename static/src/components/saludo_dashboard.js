@@ -2,9 +2,11 @@
 
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
+import { OwlChartRenderer } from "./chart/chart_renderer";
 const { Component, useState, onWillStart } = owl;
 
 export class OwlSaludosDashboard extends Component {
+    static components = { OwlChartRenderer };
     setup() {
         this.state = useState({
             title: "",
@@ -38,20 +40,20 @@ export class OwlSaludosDashboard extends Component {
 
     async getModuleCount() {
         try {
-            const count = await this.orm.readGroup(
+            const countModule = await this.orm.readGroup(
                 "ir.module.module",
-                [[]],
+                [],
                 ["state"],
                 ["state"],
             );
-            return count;
+            return countModule;
         } catch (error) {
             console.error("Error fetching module information:", error);
             return [];
         }
     }
 }
-
+OwlSaludosDashboard.Component={OwlChartRenderer};
 OwlSaludosDashboard.template = "owl.SaludosDashboard";
 registry.category("actions").add("owl.saludo_dashboard", OwlSaludosDashboard);
 
