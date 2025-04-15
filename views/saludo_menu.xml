@@ -34,9 +34,9 @@
 
         <!-- Submenú de Transaction: Saludos -->
         <menuitem id="menu_transaction_saludos"
-                  name="Saludos"
+                  name="Transaction"
                   parent="menu_saludos_transaction"
-                  action="action_owl_saludo_dashboard"
+                  action="action_greet_greet"
                   sequence="10" />
 
         <!-- Submenú: Reports -->

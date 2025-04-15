@@ -10,6 +10,8 @@
     'license': 'AGPL-3',
     'depends': ['base', 'web'],
     'data': [
+            'security/ir.model.access.csv',
+            'views/greet_greet.xml',
             'views/res_country.xml',
             'views/saludo_dashboard.xml',
             'views/saludo_menu.xml',
