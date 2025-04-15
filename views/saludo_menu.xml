@@ -47,9 +47,9 @@
 
         <!-- Submenú de Reports: Saludos -->
         <menuitem id="menu_report_saludos"
-                name="Saludos"
+                name="Report"
                 parent="menu_saludos_report"
-                action="action_owl_saludo_dashboard"
+                action="action_saludos_report"
                 sequence="10" />
 
         <!-- Submenú: Configuration -->

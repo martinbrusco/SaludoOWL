@@ -12,6 +12,7 @@
     'data': [
             'security/ir.model.access.csv',
             'views/greet_greet.xml',
+            'views/saludo_report.xml',
             'views/res_country.xml',
             'views/saludo_dashboard.xml',
             'views/saludo_menu.xml',

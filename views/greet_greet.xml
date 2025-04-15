@@ -1,19 +1,20 @@
 <odoo>
     <data>
 
-        <!-- Acción -->
+        <!-- Acción con vista explícita -->
         <record id="action_greet_greet" model="ir.actions.act_window">
             <field name="name">Saludo</field>
             <field name="res_model">greet.greet</field>
             <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_greet_greet_tree"/>
         </record>
 
-        <!-- Vista Tree -->
+        <!-- Vista Tree editable -->
         <record id="view_greet_greet_tree" model="ir.ui.view">
             <field name="name">greet.greet.tree</field>
             <field name="model">greet.greet</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree create="true" edit="true" delete="true" duplicate="true">
                     <field name="name"/>
                     <field name="date"/>
                 </tree>
