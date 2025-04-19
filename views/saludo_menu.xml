@@ -1,36 +1,42 @@
 <odoo>
     <data>
 
-        <!-- Acción principal del dashboard -->
+        <!-- Acción del Dashboard -->
         <record id="action_owl_saludo_dashboard" model="ir.actions.client">
             <field name="name">Owl Saludos Dashboard</field>
             <field name="tag">owl.saludo_dashboard</field>
         </record>
 
-        <!-- Menú raíz: Saluditos -->
+        <!-- Menú raíz: Saluditos (sin acción para permitir submenús) -->
         <menuitem id="menu_owl_saludo_dashboard"
                   name="Saluditos"
-                  action="action_owl_saludo_dashboard"
                   sequence="10" />
+
+        <!-- Submenú: Dashboard -->
+        <menuitem id="menu_dashboard_main"
+                  name="Dashboard"
+                  parent="menu_owl_saludo_dashboard"
+                  action="action_owl_saludo_dashboard"
+                  sequence="1" />
 
         <!-- Submenú: Manage -->
         <menuitem id="menu_saludos_manage"
                   name="Manage"
                   parent="menu_owl_saludo_dashboard"
-                  sequence="20" />
+                  sequence="10" />
 
         <!-- Submenú de Manage: Friend -->
         <menuitem id="menu_manage_friend"
                   name="Friend"
                   parent="menu_saludos_manage"
-                  action="action_owl_saludo_dashboard"
+                  action="action_greet_friend"
                   sequence="10" />
 
         <!-- Submenú: Transaction -->
         <menuitem id="menu_saludos_transaction"
                   name="Transaction"
                   parent="menu_owl_saludo_dashboard"
-                  sequence="30" />
+                  sequence="20" />
 
         <!-- Submenú de Transaction: Saludos -->
         <menuitem id="menu_transaction_saludos"
@@ -43,28 +49,27 @@
         <menuitem id="menu_saludos_report"
                   name="Reports"
                   parent="menu_owl_saludo_dashboard"
-                  sequence="40" />
+                  sequence="30" />
 
         <!-- Submenú de Reports: Saludos -->
         <menuitem id="menu_report_saludos"
-                name="Report"
-                parent="menu_saludos_report"
-                action="action_saludos_report"
-                sequence="10" />
+                  name="Report"
+                  parent="menu_saludos_report"
+                  action="action_saludos_report"
+                  sequence="10" />
 
         <!-- Submenú: Configuration -->
         <menuitem id="menu_saludos_configuration"
                   name="Configuration"
                   parent="menu_owl_saludo_dashboard"
-                  sequence="50" />
+                  sequence="40" />
 
-        <!-- Submenú de Configuration: Saludos -->
+        <!-- Submenú de Configuration: Country -->
         <menuitem id="menu_configuration_country"
-                name="Country"
-                parent="menu_saludos_configuration"
-                action="action_res_country"
-                sequence="10" />
+                  name="Country"
+                  parent="menu_saludos_configuration"
+                  action="action_res_country"
+                  sequence="10" />
 
     </data>
 </odoo>
-
